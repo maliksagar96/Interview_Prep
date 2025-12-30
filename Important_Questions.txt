@@ -1,0 +1,66 @@
+Here’s a focused list of **C++ coding interview questions** you’re likely to face for a **scientific software developer** role (with 2 years of experience), emphasizing **performance, correctness, and maintainability** — *no physics/math assumed*:
+
+---
+
+### 🔹 **Core C++ Concepts**
+1. **Explain the Rule of 5 (or Rule of 0)** — when do you need custom destructor/copy/move?  
+2. **What’s the difference between `std::unique_ptr` and `std::shared_ptr`? When would you avoid `shared_ptr` in performance-critical code?**  
+3. **What is move semantics? When does the compiler auto-generate a move constructor?**  
+4. **What does `noexcept` do, and why is it important for containers like `std::vector`?**
+
+---
+
+### 🔹 **Performance & Memory**
+5. **How do you avoid unnecessary copies when passing/returning large objects (e.g., vectors, matrices)?**  
+6. **What is copy elision? What changed in C++17?**  
+7. **How would you design a class that owns a large buffer (e.g., image data) to be both copyable and movable efficiently?**  
+8. **What are cache-friendly data layouts? Why might `std::vector<std::pair<double,double>>` be better than `std::vector<Point>` for some computations?**
+
+---
+
+### 🔹 **Modern C++ (C++11/14/17/20)**
+9. **When would you use `auto`? When would you avoid it (even in modern C++)?**  
+10. **What are structured bindings? Show how they improve readability with `std::map` iteration.**  
+11. **How do `if` initializers (C++17) help with resource lifetime and scope safety?**  
+12. **What is `std::optional`? When is it better than returning a sentinel value or using exceptions?**
+
+---
+
+### 🔹 **Error Handling & Safety**
+13. **How do you handle errors in performance-critical scientific code — exceptions, error codes, or `std::expected` (C++23)? Pros/cons?**  
+14. **What is undefined behavior (UB)? Give 2 common examples in numerical code (e.g., signed overflow, dangling reference). Why is UB especially dangerous in optimized builds?**  
+15. **How do you ensure const-correctness in a data-processing pipeline?**
+
+---
+
+### 🔹 **STL & Algorithms**
+16. **When would you use `std::transform` vs. a raw loop? What about `std::for_each`?**  
+17. **How can you make an algorithm work with both `std::vector` and raw arrays (or custom containers)?**  
+18. **What’s the difference between `reserve()` and `resize()`? When does calling `reserve()` improve performance?**
+
+---
+
+### 🔹 **Practical Debugging & Testing**
+19. **How would you detect a memory leak or use-after-free in a long-running simulation? (tools: Valgrind, ASan, etc.)**  
+20. **How do you write unit tests for a function that does in-place array modification?**  
+21. **What are the risks of using raw pointers in scientific code? How do smart pointers or views (`std::span`) help?**
+
+---
+
+### 🔹 **Design for Scientific Code**
+22. **How would you design a reusable “data container” for 1D/2D/3D grids that supports:  
+   - Efficient iteration  
+   - Sub-view extraction (e.g., slice)  
+   - Interoperability with external libraries (e.g., NumPy via buffer protocol)?**  
+23. **When would you prefer composition over inheritance in scientific code?**  
+24. **How do you balance abstraction (e.g., templates, interfaces) with inlining and optimization?**
+
+---
+
+💡 **Bonus tip**: Expect follow-ups like:  
+> *“How would you change your design if latency matters more than memory?”*  
+> *“What if this needs to run on GPU or with SIMD later?”*
+
+Focus on **clarity, ownership, performance trade-offs, and correctness** — that’s what scientific software teams care about most.
+
+Want a mock question deep-dive (e.g., on move semantics or `std::span`)?
