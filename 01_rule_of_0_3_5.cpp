@@ -33,7 +33,8 @@ c) Copy assignment
 struct Point {
 
   Point(double x_, double y_, const char* name):x(x_),y(y_) {
-    label = new char[strlen(name) + 1];
+    label = new char[strlen(name) + 1];  
+    //Que - Why the label length is +1 long. Ans - It is to accomodate null terminator. '\0'.
     strcpy(label, name);
   }
 
@@ -67,12 +68,84 @@ struct Point {
       label = new char[strlen(other.label) + 1];
       strcpy(label, other.label);
     }
+    return *this;
   }
 
 };
 
-
-
-
 // Note: Move operations are NOT generated (compiler disables them due to user-defined destructor/copy)
 // Copying is expensive; moving falls back to copy — Rule of 3 only.
+
+/*
+  Rule of 5
+  1) Destrcutor. 
+  2) Copy Constructor.
+  3) Copy assignment.
+  4) Move Constructor.
+  5) Move assignment.
+
+  Well what the hell is a move assignment?
+
+  Well move assignment is used when we are moving data from one existing object to another pre-exisiting object. We are not constructing a new object. 
+  Hence move construtor is not invoked but the move operator. 
+  Exampple
+
+  Point p1(1,2,"a");
+  Point p2 = std::move(p1); //p2 is not existing this invokes move constructor. 
+  Point p3(2,3, "b");
+  p3 = std::move(p2);     //p3 is already existing. this invokes the move operator. 
+
+*/
+
+struct Point {
+  
+  double x, y;
+  char *label;
+
+  Point(double x_, double y_, const char* name):x(x_), y(y_) {
+    label = new char[strlen(name) + 1];
+    strcpy(label, name);    
+  }
+
+  Point(Point& other):x(other.x), y(other.y) {
+    label = char[strlen(other.label) + 1];
+    strcpy(label, other.label);
+  }
+
+  //Copy operator
+  Point& operator=(const Point &other) const {
+    if(this != other) {
+      delete[] label;
+      x = other.x;
+      y = other.y;
+      label = new char[strlen(other.label) + 1];
+      strcpy(label, other.label);
+    }
+    return *this;
+    
+  }
+
+  //move constructor
+  Point(Point &&other) noexcept:x(other.x), y(other.y), label(other.label) {
+    other.label = nullptr;
+  }
+
+
+  //move operator
+  Point& operator=(Point &&other) noexcept {
+    if(this != other) {
+      delete[] label;
+      x = other.x;
+      y = other.y;
+      label = other.label;  //Stealing the resource. label will copy the address of other.label. And then we are removing the ownership from other in the next line.    
+      other.label = nullptr;
+    }
+
+    return *this;
+  }
+
+  ~Point() {
+    delete[] label;
+  }
+
+};
