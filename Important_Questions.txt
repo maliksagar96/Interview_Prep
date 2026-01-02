@@ -15,7 +15,7 @@ Here’s a focused list of **C++ coding interview questions** you’re likely to
 6. **What is copy elision? What changed in C++17?**  
 7. **How would you design a class that owns a large buffer (e.g., image data) to be both copyable and movable efficiently?**  
 8. **What are cache-friendly data layouts? Why might `std::vector<std::pair<double,double>>` be better than `std::vector<Point>` for some computations?**
-
+8.(a) When to use SoA and AoS?
 ---
 
 ### 🔹 **Modern C++ (C++11/14/17/20)**
