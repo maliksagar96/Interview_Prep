@@ -1,0 +1,99 @@
+General questions
+
+1. What is the difference between a reference and a pointer?
+2. Explain the difference between int x; int x(); and int x{};
+3. assert(sizeof(int) != sizeof(long)); Is this statement always true?
+4. What will the following line of code print out and why? unsigned int x = -1; std::cout << x;
+5. Can you explain the difference between new and new[]? Is it possible to delete memory using delete[] allocated within the new operator?
+6. What is the difference between new/malloc or delete/free?
+7. What is the difference between stack and heap allocation?
+8. What is the evaluation order of the function parameters in C++?
+9. What is the construction order of global variables?
+10. What is the forward declaration of classes? What is it used for?
+11. What is the meaning of a const keyword and how can it be used? 
+12. What is the meaning of a static keyword and how can it be used? 
+13. What are the advantages of using friend classes?
+14. What is an abstract class? What is the pure virtual function?
+15. How do you create a virtual constructor and virtual destructor for a class? Why would you do it? 
+16. What is a vtable and how does it work?
+17. Initialization order of Bases and Members.
+18. Is it possible to call a virtual function inside of a constructor/destructor?
+19. What is a template and how is it used? 
+20. What is specialization? How can it help to improve efficiency? 
+21. struct Vector{ int* data; int size; }; Write copy constructor, operator= and destructor for the struct Vector.
+22. What is an iterator? What iterator types do you know?
+23. What is RAII?
+24. When should you use std::unique_ptr vs. std::shared_ptr? 
+25. How should runtime errors be handled in C++? What general approaches do you know?
+26. What will happen if the exception will be thrown within a constructor?
+27. C++ supports multiple inheritance. What is the "diamond problem" that can occur with multiple inheritance? Give an example.
+
+Concurrency and multithreading questions
+
+1. How to create a new thread and give it an execution function? Give an example of a simple function.
+2. What two modes of execution of the thread function can you name?
+3. What C++ features can we use to protect data between multiple threads?
+4. How can we synchronize data between threads?
+5. There is a Value data type that works in a single-threaded environment. Make changes so that it works as efficiently as possible in a multi-threaded environment.
+
+class Value 
+{ 
+private:
+     int m_value{};
+
+public:
+      Value (){}
+      int getValue() const
+      { 
+          return m_value;
+      }
+      void updateValue(int value)
+      { 
+          m_value = value; 
+      } 
+}
+
+6. There is an algorithm that is divided into 5 parts. They must be executed one by one in different threads, using the result of the previous step. How do you implement it?
+7. What is the difference between using std::async and std::thread?
+8. There is a thread that reads the data, and there is a thread that uses the received data. These threads run independently. How do you implement synchronization between these threads?
+9. What does the co_yield function do?
+10. Explain the difference between sleep_for and sleep_until functions.
+11. Is it possible to find out how many threads are available for parallel work using C++ tools?
+12. There are two mutexes. How do you securely acquire them?
+13. You have a function that needs to be called once, no matter how many threads you have. How will you do it?
+14. What is std::promises used for?
+15. What is std::packaged_task used for?
+16. What is std::future used for?
+17. Is it possible to return an exception from a thread? If yes, please explain.
+18. Does adding multithreading always improve the result?
+19. Is there an alternative to a mutex in C++ to ensure data protection?
+20. What can you tell about std::atomic?
+21. What is a race condition in a multi-threaded application?
+22. What are coroutines?
+23. What is std::jthread? Can you explain the difference between std::jthread and std::thread?
+
+Literature
+
+Introductory without previous programming experience
+1. Programming: Principles and Practice Using C++ (Bjarne Stroustrup)
+
+Introductory with previous programming experience
+1. A Tour of C++ (Bjarne Stroustrup)
+2. Thinking in C++ (Bruce Eckel)
+
+Best practices
+1. Effective C++ (Scott Meyers)
+2. Effective STL (Scott Meyers)
+
+Intermediate
+1. Inside the C++ Object Model (Stanley Lippman)
+2. More Effective C++ (Scott Meyers)
+3. Exceptional C++ (Herb Sutter)
+4. More Exceptional C++ (Herb Sutter)
+5. Exceptional C++ Style (Herb Sutter)
+6. C++ Coding Standards (Herb Sutter and Andrei Alexandrescu)
+7. C++ Concurrency in Action (Anthony Williams)
+
+Advanced
+1. Modern C++ Design (Andrei Alexandrescu)
+2. C++ Template Metaprogramming (David Abrahams and Aleksey Gurtovoy)
