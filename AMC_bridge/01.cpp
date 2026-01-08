@@ -11,10 +11,7 @@
   int &r= lvalue; expects an lvalue on the RHS.
 
   int *p expects an address on the right hand side. 
-  
-
   So once declared r and a will be attached till the end of time. r can't be bound again but a pointer can be that the key difference.
-
 
 */
 
@@ -24,22 +21,32 @@ using namespace std;
 
 int main() {
   
-  int a;
-  int &r = a; //Aliases. 
   
-  //Address of both the variables are same.
-  cout<<&a<<endl;
-  cout<<&r<<endl;
-  a = 10;
-  cout<<r<<endl;
+  
+  
 
   int a = 10, b = 20;
   int* p = &a;   // p points to a
+
+  cout<<"Pointing to a hence, *p = "<<*p<<endl;
+
   p = &b;        // ✅ OK: pointer rebound
 
-  int& r = a;    // r is an alias for a
-  // r = &b;     // ❌ Compile error
-  r = b;         // ✅ Assigns 20 to 'a' — does NOT rebind r!
+  cout<<"Pointing to b hence, *p = "<<*p<<endl;
+  
+  int c;
+  int &r = c; //Aliases. 
+
+  //Address of both the variables are same.
+  cout<<&c<<endl;
+  cout<<&r<<endl;
+
+  c = 10;
+  cout<<r<<endl;
+
+  int &r2 = a;    // r is an alias for a
+  // r2 = &b;     // ❌ Compile error
+  r2 = b;         // ✅ Assigns 20 to 'a' — does NOT rebind r!
 
 
   return 0;
