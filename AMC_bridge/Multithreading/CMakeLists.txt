@@ -9,7 +9,9 @@ set(target_name test)
 
 set(Sources
     #01.cpp
-    02.cpp
+    #02.cpp
+    #03.cpp
+    04.cpp
 )
 
 add_executable(${target_name} ${Sources})

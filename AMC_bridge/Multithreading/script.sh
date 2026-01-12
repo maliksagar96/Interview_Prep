@@ -1,5 +1,6 @@
 cd build
-rm test
+rm -r *
+cmake ..
 make -j6
 clear
 ./test

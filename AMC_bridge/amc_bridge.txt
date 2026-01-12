@@ -71,6 +71,7 @@ public:
 21. What is a race condition in a multi-threaded application?
 22. What are coroutines?
 23. What is std::jthread? Can you explain the difference between std::jthread and std::thread?
+24. What is difference between threading and multiprocessing?
 
 Literature
 

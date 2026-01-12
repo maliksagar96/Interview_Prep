@@ -69,28 +69,28 @@ include CMakeFiles/test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test.dir/flags.make
 
-CMakeFiles/test.dir/02.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/02.cpp.o: ../02.cpp
-CMakeFiles/test.dir/02.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/02.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/02.cpp.o -MF CMakeFiles/test.dir/02.cpp.o.d -o CMakeFiles/test.dir/02.cpp.o -c /home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/02.cpp
+CMakeFiles/test.dir/04.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/04.cpp.o: ../04.cpp
+CMakeFiles/test.dir/04.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/04.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/04.cpp.o -MF CMakeFiles/test.dir/04.cpp.o.d -o CMakeFiles/test.dir/04.cpp.o -c /home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/04.cpp
 
-CMakeFiles/test.dir/02.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/02.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/02.cpp > CMakeFiles/test.dir/02.cpp.i
+CMakeFiles/test.dir/04.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/04.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/04.cpp > CMakeFiles/test.dir/04.cpp.i
 
-CMakeFiles/test.dir/02.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/02.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/02.cpp -o CMakeFiles/test.dir/02.cpp.s
+CMakeFiles/test.dir/04.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/04.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/04.cpp -o CMakeFiles/test.dir/04.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/02.cpp.o"
+"CMakeFiles/test.dir/04.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-test: CMakeFiles/test.dir/02.cpp.o
+test: CMakeFiles/test.dir/04.cpp.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test"

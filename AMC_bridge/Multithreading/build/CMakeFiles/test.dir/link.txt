@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/test.dir/02.cpp.o -o test  -lpthread 
+/usr/bin/c++ CMakeFiles/test.dir/04.cpp.o -o test  -lpthread 

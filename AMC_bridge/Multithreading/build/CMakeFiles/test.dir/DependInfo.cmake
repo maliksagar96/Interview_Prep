@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/02.cpp" "CMakeFiles/test.dir/02.cpp.o" "gcc" "CMakeFiles/test.dir/02.cpp.o.d"
+  "/home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/04.cpp" "CMakeFiles/test.dir/04.cpp.o" "gcc" "CMakeFiles/test.dir/04.cpp.o.d"
   )
 
 # Targets to which this target links.
