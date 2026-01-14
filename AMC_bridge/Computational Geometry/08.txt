@@ -1,0 +1,7 @@
+8. How to check if three vectors are coplanar?
+Ans. (v1 - v2) x (v2 - v3) = 0.
+also scalar triple product will be 0.
+a.(bxc) = 0
+Volume of the parallelopiped is 0.
+
+A parallelepiped is a 3D figure formed by six parallelograms, where opposite faces are parallel and equal—essentially the 3D analog of a parallelogram.

@@ -1,0 +1,9 @@
+9. Can you uniquely define a plane having two non-collinear vectors? How?
+
+Ans Yes if the point of their origin is known. 
+r = r0 + su + tv. 
+
+s and t are scalars and u and v are vectors.
+
+
+

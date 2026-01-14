@@ -1,0 +1,6 @@
+10. What is the mixed product of three vectors? What is its geometric sense?
+
+Ans a.(bxc) = volume of parallelopided
+
+a.(bxc) = c.(axb) = b.(cxa) invariant under cyclic permutation. 
+If it is positive that means a and bxc are on same side otherwise they are on the opposite sides.
