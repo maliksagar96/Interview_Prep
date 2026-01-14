@@ -1,0 +1,11 @@
+2. What is the dot product of two vectors? List its properties.
+Ans. Dot product is a1*b1 + a2*b2 + a3*b3.
+
+or a1 * a2 = |a1|*|a2|*cos(theta)
+
+1) This gives out the component of one vector along the other vector.
+2) Commutative a.b = b.a
+3) Positive definite a.a >= 0
+
+
+

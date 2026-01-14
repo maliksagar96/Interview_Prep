@@ -1,0 +1,2 @@
+6. How do you compute an angle between two vectors?
+Ans -  We can do this by using dot product. 

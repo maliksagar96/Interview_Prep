@@ -1,0 +1,9 @@
+5. What is the cross product? List its properties.
+Ans. axb= |a||b|sin(theta)n^
+
+Area of the parallelogram made by vector a and b.
+Anticommutative
+Not assosiative
+Self cross product is 0.
+
+

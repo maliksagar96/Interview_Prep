@@ -1,0 +1,6 @@
+1. What is the difference between a point and a vector?
+
+Vector has direction and magnitude. Component wise subtraction of 2 points is vector.
+Point is a scalar quantity. No direction.
+
+

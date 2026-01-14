@@ -1,0 +1,3 @@
+3. How do you check if two vectors are parallel/orthogonal?
+Ans. If 2 vectors are parallel their cross product is 0. 
+If they are orthogonal their dot product is 0.

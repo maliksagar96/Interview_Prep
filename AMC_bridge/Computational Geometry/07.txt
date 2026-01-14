@@ -1,0 +1,7 @@
+7. How do you compute a signed angle measured from vector A to vector B on a 3D plane containing both vectors?
+Ans = theta = atan2(||AXB||, A.B)
+
+Question - What is the difference between atan and atan2. 
+
+atan takes a single value and gives output between -90 to 90.
+atan2 takes 2 arguments(that's why a 2). and gives output from -pi to pi in all 4 quadrants.

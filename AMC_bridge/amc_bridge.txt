@@ -72,6 +72,7 @@ public:
 22. What are coroutines?
 23. What is std::jthread? Can you explain the difference between std::jthread and std::thread?
 24. What is difference between threading and multiprocessing?
+25. What are conditional variables?
 
 Literature
 
@@ -98,3 +99,45 @@ Intermediate
 Advanced
 1. Modern C++ Design (Andrei Alexandrescu)
 2. C++ Template Metaprogramming (David Abrahams and Aleksey Gurtovoy)
+
+/***********************************************************************************************************/
+
+1. What is the difference between a point and a vector?
+2. What is the dot product of two vectors? List its properties.
+3. How do you check if two vectors are parallel/orthogonal?
+4. How do you find a projection of one vector onto the direction of another vector?
+5. What is the cross product? List its properties.
+6. How do you compute an angle between two vectors?
+7. How do you compute a signed angle measured from vector A to vector B on a 3D plane containing both vectors?
+8. How to check if three vectors are coplanar?
+9. Can you uniquely define a plane having two non-collinear vectors? How?
+10. What is the mixed product of three vectors? What is its geometric sense?
+11. What is a convex polygon? How do you check if a polygon is convex or concave?
+
+General questions
+1. Compute the distance between an infinite line and a point in 3D. What needs to be changed to compute the distance between a finite segment and a point?
+2. Compute the distance between two arbitrary infinite lines in 3D.
+3. Compute the intersection line for two planes.
+4. How do you compute the area of a convex polygon? How should the algorithm be changed to work with non-convex polygons?
+5. How do you determine whether a polygon's points go in a clockwise or counter-clockwise direction?
+6. How many parameters are required to uniquely define a line/plane? What are the parameters?
+7. How many parameters are required to uniquely define a sphere/cone/cylinder/torus? What are the parameters?
+8. Is it possible to find a circle's radius and the center point from three points lying on the circle? If yes, how would you do so? Is it possible to do with less than 3 points? 
+9. Suppose you have a triangle. All edge lengths and corner angles are known. How would you compute the radius of the minimum enclosing circle?
+
+Transformations and rotational matrices
+1. Given a coordinate system with X-axis (x1, y1), Y-axis (x2, y2) and an origin O(x,y). What would be the matrix that transforms the point coordinates from a global coordinate space?
+2. How do you turn a 2D vector 90 degrees in a CCW direction?
+3. How do you compute an inverted rotational matrix? 
+4. What would be the transformation matrix that rotates an object around an axis that passes through its origin and is aligned with the Z-direction? How would the matrix change if the axis passed through an arbitrary point P in 3D space?
+5. What would be the matrix for a 0 degree rotation around an axis line that passes point P(0.55, 12.669, 0.15) and has the direction D = (‑0.002196, ‑0.0020014, ‑0.9999956)?
+6. Given two coordinate systems CS1 and CS2 defined by transformation matrices M1 and M2 correspondingly. Given a point P in CS1's space. How do you compute the coordinates of P in CS2's space?
+
+Literature
+1. Mathematics for Computer Graphics Applications (M.E. Mortenson) 
+2. 3D Math Primer For Graphics And Game Development (Fletcher Dunn)
+3. Mathematics for 3D Game Programming and Computer Graphics (Eric Lengyel)
+4. Foundations of 3D Computer Graphics (Steven J. Gortler)
+5. Essential Mathematics for Computational Design (Robert McNeel)
+
+

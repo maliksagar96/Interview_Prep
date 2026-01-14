@@ -1,0 +1,2 @@
+4. How do you find a projection of one vector onto the direction of another vector?
+Ans. By using dot product.
