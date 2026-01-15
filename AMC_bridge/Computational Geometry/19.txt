@@ -1,0 +1,10 @@
+9. Suppose you have a triangle. All edge lengths and corner angles are known. How would you compute the radius of the minimum enclosing circle?
+
+r = K/s
+K = area
+s = semiperimeter
+
+The circumcenter is located at the intersection of angle bisector. We need to draw a perpendicular from this point on any side. 
+
+
+

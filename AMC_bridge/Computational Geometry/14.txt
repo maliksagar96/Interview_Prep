@@ -1,0 +1,5 @@
+4. How do you compute the area of a convex polygon? How should the algorithm be changed to work with non-convex polygons?
+
+Its simple. Just take the cross product of adjacent vertices and keep adding them. 
+This will work if the origin is inside or outside the polygon. This works for convex and conave polygons. Just keep the sign of
+cross product same and take the absolute of the final value.

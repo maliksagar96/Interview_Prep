@@ -1,0 +1,17 @@
+7. How many parameters are required to uniquely define a sphere/cone/cylinder/torus? What are the parameters?
+
+Ans - 1) Sphere needs 4. Radius and center x, y and z. 
+2) Cone -   a) Axis direction
+            b) Height
+            c) Aperture angle
+            d) Apex vertiex point
+
+3) Cylinder a) Axis direction   
+            b) Height
+            c) Base Radius
+            d) Base Center
+
+4) Torus    a) Center.   
+            b) Axis.
+            c) Radius from the center.
+            d) Radius of the circle that will revolve around this radius. 

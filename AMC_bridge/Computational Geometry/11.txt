@@ -1,0 +1,2 @@
+11. What is a convex polygon? How do you check if a polygon is convex or concave?
+Ans - By taking cross product of vectors made by vertices.

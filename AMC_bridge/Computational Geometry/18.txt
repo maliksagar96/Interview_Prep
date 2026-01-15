@@ -1,0 +1,11 @@
+8. Is it possible to find a circle's radius and the center point from three points lying on the circle? If yes, how would you do so? Is it possible to do with less than 3 points? 
+Ans. To find the circumcircle we find the perpendicular bisector of the sides of the triangle and from this we can find radius
+by joining the circumcenter and any vertex of the triangle. This is the geometrical way. 
+
+This can be done algebracially as well. 
+
+(x - x1)^2 + (y - y1)^2 = (x - x2)^2 + (y - y2)^2
+(x - x2)^2 + (y - y2)^2 = (x - x3)^2 + (y - y3)^2
+
+This will give us 2 equations in 2 variables. And we can solve this. 
+
