@@ -1,0 +1,17 @@
+12. Compute the distance between two arbitrary infinite lines in 3D.
+
+Case 1
+If the lines are parallel i.e. d1 x d2 = 0
+Then what we want is D = |(p2-p1)xd1| / |d1|
+
+We can look at the cross product of (only magnitude) |(p1-p2)xd1| = |d1| x component of (p1-p2) perpendicular to d1. 
+
+Case 2
+Non parallel lines.
+then the closest distance will be along the direction which is perpendicular to both the line.
+
+so D = |(p2 - p1).(d1 x d2)| / |d1 x d2|,
+
+This is the scalar triple product. If we look carefull there is a paralleopiped here in the play. We divide the volume of the parallelopiped by the area of base parallelogram. This gives height. 
+
+Wonderful way to visualise. 

@@ -1,5 +1,9 @@
 /*
     4. How can we synchronize data between threads?
+    Ans . 1) We can use mutex. 
+            2) We can use atomics.
+            3) We can use conditional variables.
+            4) 
 */
 
 #include <iostream>

@@ -1,0 +1,14 @@
+3. Compute the intersection line for two planes.
+
+Well a line in a given plane is perpendicular to its normal vector. 
+Since a line will be there in both these planes then it is parallel to both n1 and n2, hence, we have d1 = n1xn2. 
+
+Now we just need a point that this line passes through a point p0
+
+p0 = (d1n2 - d2n1) x(n1-n2) / ||n1xn2||
+
+what is d1 and d2
+well plane is ax + by + cz = d, this d1 and d2.
+
+
+
