@@ -1,0 +1,25 @@
+1. Given a coordinate system with X-axis (x1, y1), Y-axis (x2, y2) and an origin O(x,y). What would be the matrix that transforms the point coordinates from a global coordinate space?
+
+The rotation matrix is 
+cos(a) -sin(a)
+sin(a)  cos(a)
+
+The translation matrix is awesome.
+
+1 0 x0
+0 1 y0
+0 0 1
+
+Try it!! Its cool.
+
+Similarily for 3D the translation is 
+
+1 0 0 x0
+0 1 0 y0
+0 0 1 z0
+0 0 0 1
+
+To chain the transformations can be multiplied as matrices and a final transformation matrix can be obtained.
+
+
+

@@ -1,0 +1,4 @@
+2. How do you turn a 2D vector 90 degrees in a CCW direction?
+
+By multiplying by -k^ or by using rotation matrix.
+
