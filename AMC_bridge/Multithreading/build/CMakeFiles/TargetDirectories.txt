@@ -1,3 +1,0 @@
-/home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/build/CMakeFiles/test.dir
-/home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/build/CMakeFiles/edit_cache.dir
-/home/sagar/Documents/Interview_Prep/AMC_bridge/Multithreading/build/CMakeFiles/rebuild_cache.dir
