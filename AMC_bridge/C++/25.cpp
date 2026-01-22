@@ -5,8 +5,6 @@
     The object is not created and the no destructor is called.
     
 */
-
-
 #include <iostream>
 #include <stdexcept>  // for std::invalid_argument
 #include <vector>

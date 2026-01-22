@@ -1,43 +1,61 @@
 /*
 13. What are the advantages of using friend classes?
+Ans - Friend Class can use the private members of that class. 
+
+Que - Does friend need to appear in public, private or protected. 
+Ans - Any of them is fine as long as the keyword friend is associated.
 
 */
 
-#include <iostream>
+
+#include <iostream> 
 
 using namespace std;
 
-class Mechanic;
+class spy;
 
-class Engine {
-    int fuelLevel;
+class myCar {
 
-    friend class Mechanic;
+  public:
+    myCar() {
+      cout << "This is my car."<<endl;      
+    }
+    
+  
+    friend class spy;
+
+
+  private:
+
+  void secret() const{
+    cout<< "I have no insurance.\n";
+  }
+
+    friend void revealSecrets(const myCar &car);      
+
 };
 
-
-class Mechanic {
-    public:
-    void refuel(Engine &e) {
-        e.fuelLevel = 100;
-        cout<<"Fuel level = "<<e.fuelLevel<<endl;
-    }
-
-    void checkFuel(Engine &e) {
-        cout<<"e.fuelLevel = "<<e.fuelLevel<<endl;
+class spy {
+  
+  public:
+    void spillSecret(const myCar &car) {
+      car.secret();
     }
 
 };
 
-using namespace std;
+void revealSecrets(const myCar &car) {
+  car.secret();
+}
 
 int main() {
 
-    Engine car;
-    Mechanic bob;
-    bob.refuel(car);
-    
+  myCar car;
 
+  spy s1;
+  s1.spillSecret(car);
 
-    return 0;
+  revealSecrets(car);
+
+  return 0;
 }

@@ -1,41 +1,29 @@
+/*
+26. What will happen if the exception will be thrown within a constructor?
+Ans - Even though the constructor is called and data and name are fully specified, their destructors will be called autmatically.
+No object will be created.
+
+*/
+
+
 #include <iostream>
 #include <cmath>
 
 using namespace std;
 
-class Vector {
-    public:
-    double x, y, z;
+class MyClass {
+    std::string name;   // constructed first
+    int data; // constructed second
 
-    double absolute()  {
-        return sqrt(x*x + y*y + z*z);
+public:
+    MyClass() : name("test"), data(1000) {
+        throw std::runtime_error("Oops!");
+        // ← name and data are fully constructed → their destructors WILL run
     }
-
-    Vector(double x, double y, double z):x(x),y(y),z(z) {}
-};
-
-class integers {
-    public:
-    int x;
-
-    int absolute() {
-        if(x >= 0) return x;
-        return -x;
-    }
-
-    integers(int x):x(x){}
-
-};
-
-class Number: public integers, public Vector {
-    public:
-    Number(int id, double x, double y, double z) : integers(id), Vector(x, y, z) {}
 };
 
 int main() {
-    Number num(1, 3.0, 4.0, 0.0);
-    
-    cout<<num.Vector::absolute()<<endl;
+    MyClass m;
 
     return 0;
 }

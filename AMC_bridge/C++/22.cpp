@@ -1,5 +1,5 @@
 /*
-    22 What is an iterator?
+    22. What is an iterator?    
 */
 
 #include <iostream>
@@ -48,6 +48,12 @@ int main() {
     cout<<"********************Iterator for set.********************\n";
     for(auto it = randomSet.begin(); it != randomSet.end();it++) {
         cout<<*it<<endl;
+    }
+
+    cout<<"***************** USING AUTO *********************\n";
+
+    for(const auto& element: randomSet) {
+        cout << element << endl;
     }
 
 

@@ -21,7 +21,7 @@ int main() {
 
   int i =0;
 
-  foo(i++, i++);
+  foo(i++, i++); // Undefined behaviour
   
 
   return 0;

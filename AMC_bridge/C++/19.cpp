@@ -7,6 +7,8 @@
 
 using namespace std;
 
+
+//Function template.
 template<typename T>
 T sum(T a, T b) {
     return a + b;
@@ -19,6 +21,10 @@ class Box {
 
     T getValue() const{
         return value;
+    }
+
+    void setValue(T t) {
+        value = t;  
     }
 
 };

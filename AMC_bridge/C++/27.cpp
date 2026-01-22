@@ -23,12 +23,12 @@ public:
 };
 
 // Two intermediate classes inheriting from Animal
-class Mammal : public Animal {
+class Mammal : virtual public Animal {
 public:
     Mammal() { cout << "Mammal constructed\n"; }
 };
 
-class WingedAnimal : public Animal {
+class WingedAnimal : virtual public Animal {
 public:
     WingedAnimal() { cout << "WingedAnimal constructed\n"; }
 };
@@ -49,12 +49,15 @@ int main() {
     // bat.speak();   // ❌ ERROR: ambiguous — which Animal subobject to call?
 
     // ✅ Workaround (but messy): explicitly qualify
-    bat.Mammal::age = 8;
-    bat.WingedAnimal::age = 12;
+    // bat.Mammal::age = 8;
+    // bat.WingedAnimal::age = 12;
 
-    bat.Mammal::speak();        // Prints: I am an animal, age 8
-    bat.WingedAnimal::speak();  // Prints: I am an animal, age 12
+    // bat.Mammal::speak();        // Prints: I am an animal, age 8
+    // bat.WingedAnimal::speak();  // Prints: I am an animal, age 12
 
+    bat.age = 22;
+
+    cout<<"bat.age = "<<bat.age<<endl;
     // 🚨 PROBLEM 3: Two copies of Animal exist!
     cout << "Size of Bat: " << sizeof(bat) << " bytes\n";
     // Likely includes *two* 'int age' members → larger than expected!

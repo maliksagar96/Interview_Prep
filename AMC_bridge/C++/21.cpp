@@ -12,55 +12,73 @@ struct Vector {
     int *data;
     int size;
 
-    Vector(int sz):size(sz), data(nullptr) {
+    //Constructor
+    Vector(int *data_, int sz):data(nullptr), size(sz) {
         if(sz > 0) {
             data = new int[sz];
+            for(int i = 0;i<sz;i++) {
+                data[i] = data_[i];
+            }
+        }
+
+        else {
+            cout<<"Enter a positive size of the vector.\n";
+            exit(0);
         }
     }
-
-    Vector(const Vector &other):size(other.size), data(nullptr) {        
+    
+    //Copy constructor
+    Vector(const Vector &other):data(nullptr), size(other.size) {
         if(other.size > 0) {
             data = new int[other.size];
-            for(int i = 0;i<other.size;i++) {
+            for(int i = 0;i < other.size;i++) {
                 data[i] = other.data[i];
-            }
+            }            
         }
     }
 
+    //Assignmnet operator
     Vector& operator=(const Vector &other) {
-        
-        if(this == &other) return *this;
-
-        delete[] data;
-        size = other.size;
-        data = nullptr;
-
-        if(size > 0) {
-            data = new int[other.size];
-            for(int i = 0;i<other.size;i++) {
-            data[i] = other.data[i];
+        if(this != &other) {
+            size = other.size;
+            int *newData = nullptr;
+            if(other.size > 0) {
+                newData =  new int[other.size];
+                for(int i = 0;i<other.size;i++) {
+                    newData[i] = other.data[i];
+                }
             }
+            
+            delete[] data;
+            data = newData;
         }
 
-        return *this;    
+        return *this;
+
     }
 
-    //Move constructor
-    Vector(Vector &&other) noexcept :size(other.size), data(other.data) {
-        other.data =  nullptr;
-        other.size = 0;
-    }
 
-    Vector& operator=(Vector &&other) noexcept {
-        if(this == &other) return *this;    
-        delete[] data;
-        size = other.size;
-        data = other.data;
+    //Move Constructor
+    Vector(Vector &&other) noexcept : size(other.size), data(other.data) {
         other.size = 0;
         other.data = nullptr;
-
-        return *this;    
     }
+
+    //Move assignmnet operator
+    Vector& operator=(Vector &&other) noexcept {
+        if(this != &other) {
+            size = other.size;
+            other.size = 0;
+            if(data != nullptr) 
+                delete[] data;
+            data = other.data;
+            other.data = nullptr;
+        }
+
+        return *this;
+    }
+
+
 
     ~Vector() {
         delete[] data;

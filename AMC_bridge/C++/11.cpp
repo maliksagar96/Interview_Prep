@@ -23,7 +23,7 @@ class Point {
     double someFunc(const double &a) {
     }
 
-    //So that we don;t chagne the output of this function somehow. So we return a const double.
+    //So that we don't chagne the output of this function somehow. So we return a const double.
     const double someFunc2() {
 
     }
