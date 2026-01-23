@@ -1,0 +1,91 @@
+/*
+  Write the constructor for child class.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+class Member {
+  public:
+    Member() {
+      cout << "Member CTor.\n";      
+    }
+
+    ~Member() {
+      cout << "Member DTor.\n";
+    }
+};
+
+class Base {
+
+  public:
+    Base() {
+      cout << "Base CTor.\n";
+    }
+
+    virtual ~Base() {
+
+      cout << "Base DTor.\n";
+    }
+};
+
+class myClass{};
+
+class Child:public Base {
+
+  Member mem;
+  myClass *obj1;
+
+  public:  
+  // Child() = default; // Default construtor 
+  //With default Cons of mem varible.
+  Child() : mem(), obj1(nullptr) {
+
+  }
+
+  //CTor with m as input
+  Child(const Member &m, myClass *obj1_):mem(m):obj1(obj1_) { 
+
+  }
+
+  //copy constructor
+  Child(const Child &other) : Base(other), mem(other.mem), obj1(nullptr) {
+    if(other.obj1) {
+      obj1 = new myClass(*other.obj1);
+    }
+  }
+
+  // Assignment operator
+  Child& operator=(const Child &other) {
+    if(this != &other) {
+      Base::operator=(other);
+      mem = other.mem;
+      //We need to make sure that we are doing a deep copy of obj1
+      if(other.obj1 != nullptr) {        
+        myClass *temp =  new myClass(*other.obj1);//deferencing the value as other.obj1 is a pointer.
+        delete obj1;
+        obj1= temp;
+      }
+      else {
+        delete obj1;
+        obj1 = newObj;
+      }
+            
+    }
+    return *this;
+  }
+
+  //DTor here // No need to call destructor of m. It will be called automatically.
+  ~Child() override {
+    delete obj1;
+  }
+
+};
+
+int main() {
+
+  
+
+  return 0;
+}
