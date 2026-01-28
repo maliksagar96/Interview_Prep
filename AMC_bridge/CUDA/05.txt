@@ -1,0 +1,6 @@
+Que -  Tell me/us about global and shared memory. Compare those types of memory.
+
+Ans  - Global memory                          |     Shared memory
+      GBs                                     |     In few KBs(256KB etc.)
+       High latency(Many machine Cycles)      |     Low latency(Few machine cycles to fetch memory)
+       Accessible to all threads              |     Accessible to threads within one block

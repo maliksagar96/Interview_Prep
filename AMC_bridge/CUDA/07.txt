@@ -1,0 +1,8 @@
+Que - What is “coalesced memory access”?
+Ans - Definition: When all 32 threads in a warp access consecutive memory addresses in a single transaction—allowing the GPU
+      to combine 32 individual loads/stores into one or few memory transactions.
+
+Why it matters:  
+
+    ✅ Coalesced: 32 threads → 1 transaction (128 bytes, matching L2 cache line) → full bandwidth utilization.  
+    ❌ Uncoalesced: 32 threads → up to 32 separate transactions → 5–10× slower due to wasted bandwidth.

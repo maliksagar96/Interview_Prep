@@ -1,0 +1,8 @@
+Que - What are CUDA kernel dimensions? How do you choose kernel dimensions?
+
+Ans - The smallest unit is thread. Followed by block(max of 1024 threads). Followed by Grid. Max grid size in x direction is 2^31 - 1. Followed by 2^16-1 in y and z directions. 
+      Usually 256 threads should be run per block. This is a good performance sweetspot. 
+      Too few threads will mean that there are not enough threads running per SM. GPU is idle. 
+      Too many threads can mean that SMEM has become a bottleneck and won't be able to run more number of blocks per SM. 
+
+Que - What is observed in nsight compute which will show that we are using too few or too many threads per block?

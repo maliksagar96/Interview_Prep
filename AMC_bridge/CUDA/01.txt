@@ -1,0 +1,8 @@
+Que - What is a thread in the CUDA parallel computing platform? Describe the difference between the CUDA thread and CPU thread.
+
+Ans  -
+1) Thread in GPU will run same commands and same code just for different data. CPU threads run different codes in different threads. 
+2) In GPU we can allocate shared memory and constant cache memory, in CPU there is no control over cache. 
+3) CPU is designed to complete a task in the least time. Whereas GPUs are desinged to complete N number of tasks as fast as possible. 
+
+

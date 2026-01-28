@@ -1,0 +1,2 @@
+Que -  What is a CUDA warp?
+Ans  - A warp is the fundamental unit of execution in CUDA—32 threads that execute instructions in lockstep. 

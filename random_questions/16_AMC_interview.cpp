@@ -25,7 +25,6 @@ class Base {
     }
 
     virtual ~Base() {
-
       cout << "Base DTor.\n";
     }
 };

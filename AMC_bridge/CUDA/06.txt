@@ -1,0 +1,11 @@
+Que - What is “occupancy” in CUDA?
+
+Ans - Occupancy = Active warps per SM / Maximum warps per SM. 
+
+Higher Occupancy( >= 70%) is good. 
+Lower Occupancy means GPU is idle. 
+100% Occupancy != peak performance.
+
+Compute bound kernels will do arithematic most of the time and will not be waiting for memory again and again. 
+And compute bound kernel will require more registers/thread - this hits the register limit - so fewer warps per second. 
+So the Occupancy could be less for compute bound kernels. Which is not bad by the way. This is how it is. 
