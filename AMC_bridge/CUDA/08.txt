@@ -1,0 +1,3 @@
+
+Que - What is “scattered write”?
+Ans - When threads in a warp write to non-consecutive, unpredictable memory addresses—preventing the hardware from combining writes into efficient transactions.

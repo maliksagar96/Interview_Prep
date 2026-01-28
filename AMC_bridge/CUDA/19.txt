@@ -1,0 +1,4 @@
+19) What is a streaming multiprocessor?
+
+Ans) A Streaming Multiprocessor (SM) is the fundamental processing unit on an NVIDIA GPU—equivalent to a CPU core but massively parallel. 
+     A single GPU contains dozens to hundreds of SMs (e.g., 128 SMs on H100, 80 on RTX 4090), each executing thousands of threads concurrently

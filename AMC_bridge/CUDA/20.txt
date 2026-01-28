@@ -1,0 +1,4 @@
+20) What is a load/store unit?
+
+Ans - A Load/Store Unit (LSU) is a dedicated hardware execution unit inside each Streaming Multiprocessor (SM) that 
+      handles all memory operations—loading data from memory into registers (ld) and storing results back to memory (st).

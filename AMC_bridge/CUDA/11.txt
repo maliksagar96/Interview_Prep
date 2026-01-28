@@ -1,0 +1,12 @@
+Que - Does CUDA parallel execution always outperform CPU parallel execution?
+
+Ans 1) Small problem sizes
+    Kernel launch overhead (~5–10 µs) + PCIe transfer latency dominates computation time. Example: Sorting 1,000 elements—CPU finishes before GPU even receives the data.
+    2) Irregular/pointer-chasing workloads
+    Graph traversals, hash tables, or linked lists with unpredictable memory access patterns destroy coalescing and prevent latency hiding. CPUs handle pointer indirection efficiently; GPUs stall.
+    3) Heavy branching/divergence
+    Workloads with complex per-thread control flow (e.g., parsers, interpreters) cause severe warp serialization. CPUs execute divergent paths efficiently via branch prediction.
+    4) Low arithmetic intensity
+    If computation per byte transferred is low (<10 FLOPs/byte), memory bandwidth limits both devices—but CPU caches often suffice while GPU pays PCIe transfer costs.
+    5) Latency-sensitive tasks
+    GPUs optimize for throughput (total work/sec), not latency (time per task). A CPU responds to a single request in nanoseconds; a GPU may take milliseconds to schedule warps.

@@ -1,0 +1,10 @@
+Que - What are “ideal conditions” for a CUDA application? Could you please share your thoughts on it?
+Ans - 1) First, memory access must be coalesced for both reads and writes.
+      2) Second, the kernel should maintain sufficient occupancy to hide latency—typically 40–70% is enough.
+      3) Third, warp divergence must be minimal. Threads within a warp should follow the same execution path.
+       When divergence occurs (if/else with mixed outcomes), the warp serializes execution—first one path, 
+       then the other—effectively halving or worse performance for that cycle.
+      4) Fourth, shared memory should be used strategically—to reuse data loaded from global memory—but without bank conflicts.
+      5) Fifth, the problem itself must be suitable for GPUs: data-parallel with high arithmetic intensity.
+      6) Finally, synchronization overhead should be minimal. __syncthreads() is cheap within a block, 
+         but global synchronization requires kernel separation—breaking pipeline efficiency.

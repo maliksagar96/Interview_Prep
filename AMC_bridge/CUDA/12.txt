@@ -1,0 +1,8 @@
+Que - How do you measure CUDA application performance? What could hit the performance? or What are the bottlenecks? 
+
+Ans - 1) Uncoalesced memory leads to low bandwidth utilisation < 50%. 
+      2) Insufficient occupancy - High "no instructions" stalls + low active warps/SM.
+      3) Warp divergence - Minimize if/else with mixed warp outcomes; reorganize data.
+      4) Shared memory bank conflicts - Low shared memory throughput despite heavy usage, avoid strides. 
+      5) Scattered writes - Write bandwidth << read bandwidth.
+

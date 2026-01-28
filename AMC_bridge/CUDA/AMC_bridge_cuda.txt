@@ -1,34 +1,32 @@
-
-
 General CUDA questions
 
-    What is a thread in the CUDA® parallel computing platform? Describe the difference between the CUDA thread and CPU thread.
-    What is a CUDA warp?
-    What is a CUDA kernel?
-    What are CUDA kernel dimensions? How do you choose kernel dimensions?
-    Tell me/us about global and shared memory. Compare those types of memory.
-    What is “occupancy” in CUDA?
-    What is “coalesced memory access”?
-    What is “scattered write”?
-    What is a “memory bank conflict”? Does it exist for both global and shared memory?
-    What are “ideal conditions” for a CUDA application? Could you please share your thoughts on it?
-    Does CUDA parallel execution always outperform CPU parallel execution?
-    What synchronization mechanisms in CUDA do you know?
-    How can communication between thread blocks be achieved?
-    How do you measure CUDA application performance? What could hit the performance?
-    Tell me/us about profiling tools. How do you profile a CUDA application and an individual CUDA kernel?
-    How do you improve the performance of the CUDA kernel?
-    What is unified memory?
-    Tell me/us about __host__,__global__, and __device__  specifiers.
+    1) What is a thread in the CUDA® parallel computing platform? Describe the difference between the CUDA thread and CPU thread.
+    2) What is a CUDA warp?
+    3) What is a CUDA kernel?
+    4) What are CUDA kernel dimensions? How do you choose kernel dimensions?
+    5) Tell me/us about global and shared memory. Compare those types of memory.
+    6) What is “occupancy” in CUDA?
+    7) What is “coalesced memory access”?
+    8) What is “scattered write”?
+    9) What is a “memory bank conflict”? Does it exist for both global and shared memory?
+    10) What are “ideal conditions” for a CUDA application? Could you please share your thoughts on it?
+    11) Does CUDA parallel execution always outperform CPU parallel execution?
+    12) What synchronization mechanisms in CUDA do you know?
+    13)How can communication between thread blocks be achieved?
+    14) How do you measure CUDA application performance? What could hit the performance?
+    15) Tell me/us about profiling tools. How do you profile a CUDA application and an individual CUDA kernel?
+    16) How do you improve the performance of the CUDA kernel?
+    17) What is unified memory?
+    18) Tell me/us about __host__,__global__, and __device__  specifiers.
 
 GPU architecture-specific questions
 
-    What is a streaming multiprocessor?
-    What is a load/store unit?
-    What is Warp Scheduler?
-    What is SFU?
-    Tell me/us about FP32 and FP64 units. What are tensor cores?
-    Tell me/us about L1 and L2 caches.
-    Tell me/us about CUDA registers.
-    What is texture memory? What benefits does it provide?
+    19) What is a streaming multiprocessor?
+    20)What is a load/store unit?
+    21)What is Warp Scheduler?
+    22)What is SFU?
+    23)Tell me/us about FP32 and FP64 units. What are tensor cores?
+    24)Tell me/us about L1 and L2 caches.
+    25)Tell me/us about CUDA registers.
+    26)What is texture memory? What benefits does it provide?
 
