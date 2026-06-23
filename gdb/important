@@ -1,0 +1,35 @@
+The following set of commands are the most important ones
+
+r = run
+break main => set break point at the function main
+b lib1fun => set break point at the function lib1fun
+
+backtrace
+
+#0  bar()  at main.cpp:12
+#1  foo()  at main.cpp:7
+#2  main() at main.cpp:3
+
+#0 is the current function.
+
+#1 is the function that called it.
+
+#2 is the function that called that one.
+
+step => This is to go inside a function
+list => gives you some lines of code above and below the current point we are at. 
+
+frame => tells us where we are currently
+ptype a => gives the type of variable a is. 
+
+finish => Runs untill the function returns.
+
+save breakpoints bp.txt
+load this at the time of another program by 
+source bp.txt
+
+
+
+
+
+
